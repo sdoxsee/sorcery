@@ -1,4 +1,10 @@
 Sorcery::Application.routes.draw do
+  get "oauths/oauth"
+  get "oauths/callback"
+
+  match "oauth/callback" => "oauths#callback"
+  match "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
+
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"
