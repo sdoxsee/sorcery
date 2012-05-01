@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 gem 'sqlite3'
 gem 'rspec-rails'
-gem 'sorcery', git: "https://github.com/rcarter/sorcery.git"
+gem 'sorcery', :git => "https://github.com/rcarter/sorcery.git"
 gem 'bcrypt-ruby'
 gem 'haml'
 
